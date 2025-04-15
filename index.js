@@ -74,6 +74,13 @@ for(let i=0;i<preConversionFarenheitArray.length;i++) {
     fToCSum+=postConvFToC; //add converted value to sum
 }
 
+//convert and sum up temps C to F
+let cToFSum=0;
+for(let i=0;i<preConversionCelsiusArray.length;i++) {
+    let postConvCToF=cToF(preConversionCelsiusArray[i]);
+    cToFSum+=postConvCToF;
+}
+
 //define totals
 let tot_temperature_in_fahrenheit=preConversionFarenheitTemps+cToFSum;
 let tot_temperature_in_celsius=fToC(tot_temperature_in_fahrenheit);
